@@ -1,5 +1,6 @@
 import "./App.css";
 import Companies from "./components/companies/Companies";
+import Contact from "./components/contact/Contact";
 import Residencies from "./components/residencies/Residencies";
 import Value from "./components/value/Value";
 import Extra from "./extra/Extra";
@@ -16,6 +17,7 @@ function App() {
         <Companies />
         <Residencies/>
         <Value/>
+        <Contact/>
       </div>
     </>
   );

@@ -29,6 +29,8 @@ padding: 1rem;
 width: 100%;
 justify-content: space-between !important;
 cursor: pointer;
+box-shadow: var (--shadow);
+border-radius: 6px;
 }
 
 .icon{
