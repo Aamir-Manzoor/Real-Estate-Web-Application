@@ -1,0 +1,9 @@
+.App{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.App > :nth-child(1){
+    background-color: black;
+    position: relative;
+}
