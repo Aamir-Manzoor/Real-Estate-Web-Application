@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -10,8 +11,10 @@ import "react-accessible-accordion/dist/fancy-example.css";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import "./value.css";
 import Main2Img from "../../assets/main3.jpg";
-import data from "../../utils/accordion.js";
+import data from "../../utils/accordion";
+
 const Value = () => {
+  const [className, setClassName] = useState(null);
   return (
     <section className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
@@ -23,7 +26,6 @@ const Value = () => {
         </div>
 
         {/* rightSide */}
-
         <div className="flexColStart v-right">
           <span className="orangeText">Our Value</span>
           <span className="primaryText">value we give to you</span>
@@ -41,12 +43,27 @@ const Value = () => {
           >
             {data.map((item, i) => {
               return (
-                <AccordionItem key={i} uuid={i} className="accordionItem">
+                <AccordionItem key={i} uuid={i} className={`accordionItem ${className}`}>
                   <AccordionItemHeading>
-                    <AccordionItemButton>
+                    <AccordionItemButton className="accordionButton flexCenter">
+                      <AccordionItemState>
+                        {({ expanded }) =>
+                          expanded
+                            ? setClassName("expanded")
+                            : setClassName("collapsed")
+                        }
+                      </AccordionItemState>
+
                       <div className="flexCenter icon">{item.icon}</div>
+                      <span className="primaryText">{item.heading}</span>
+                      <div className="flexCenter icon">
+                        <MdOutlineArrowDropDown size={20} />
+                      </div>
                     </AccordionItemButton>
                   </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p className="secondaryText">{item.detail}</p>
+                  </AccordionItemPanel>
                 </AccordionItem>
               );
             })}
