@@ -1,0 +1,35 @@
+.inner-container {
+  margin: 0 auto;
+  width: 70%;
+  gap: 1.5rem;
+  /* background-color: orangered; */
+  padding: 2rem;
+  border-radius: 5rem;
+  border: 2px solid rgb(148, 148, 229);
+  text-align: center;
+}
+
+/* .inner-container .primaryText{
+    color: aliceblue;
+    font-weight: 600;
+} */
+
+/* .inner-container .secondaryText{
+    color: grey;
+} */
+
+.inner-container .button {
+  background-color: beige;
+  border: 1px solid aliceblue;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  color: blue;
+  transition: all 300ms ease-in;
+}
+
+.inner-container .button .link:hover{
+    background: beige !important;
+    transition: all 300ms ease-in;
+}
+
+
