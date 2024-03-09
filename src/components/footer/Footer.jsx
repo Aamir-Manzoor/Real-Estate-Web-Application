@@ -1,4 +1,5 @@
 import Imgfooter from "../../assets/logo.jpg";
+import "./footer.css";
 const Footer = () => {
   return (
     <section className="f-wrapper">
@@ -12,6 +13,17 @@ const Footer = () => {
         </div>
 
         {/* right Side  */}
+        <div className="flexColStart f-right">
+          <span className="primaryText">Information</span>
+          <span className="secondaryText">Bangalore, Karnataka</span>
+
+          <div className="flexCenter f-menu">
+            <span>Property</span>
+            <span>Services</span>
+            <span>Product</span>
+            <span>About Us</span>
+          </div>
+        </div>
       </div>
     </section>
   );
